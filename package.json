@@ -1,11 +1,11 @@
 {
   "license": "ISC",
   "main": "index.js",
-  "name": "use-global-state",
+  "name": "use-global-state-hook",
   "repository": "github:alpgumus/use-global-state",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "alpgumus"
 }

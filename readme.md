@@ -1,4 +1,4 @@
-# use-global-state
+# use-global-state-hook
 
 Minimalistic global state and variable management with React Hooks and Context
 
@@ -8,7 +8,7 @@ Minimal example:
 
 ```javascript
 import React from 'react'
-import GlobalStateProvider, { useGlobalState } from 'use-global-state'
+import GlobalStateProvider, { useGlobalState } from 'use-global-state-hook'
 
 const App = () => {
   const { globalState, updateGlobalState } = useGlobalState({
