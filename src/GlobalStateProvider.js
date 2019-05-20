@@ -45,7 +45,7 @@ export default ({ children, environment }) => {
   }, [])
 
   const value = { globalState, updateGlobalState, globalVariables, updateGlobalVariables }
-  return <GlobalStateCtx.Provider value={value}>{children}</GlobalStateCtx.Provider>
+  return React.createElement(GlobalStateCtx.Provider, { value: value }, children)
 }
 
 export const useGlobalState = initUpdateState => {
