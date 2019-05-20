@@ -11,10 +11,7 @@ import React from 'react'
 import GlobalStateProvider, { useGlobalState } from 'use-global-state-hook'
 
 const App = () => {
-  const { globalState, updateGlobalState } = useGlobalState({
-    counter: 0,
-    environment: { debug: true },
-  })
+  const { globalState, updateGlobalState } = useGlobalState({ counter: 0 })
 
   const { counter } = globalState
   return (
