@@ -10,12 +10,12 @@ Minimal example:
 import React from 'react'
 import GlobalStateProvider, { useGlobalState } from 'use-global-state-hook'
 
-const App = () => {
+const MyComponent = () => {
   const { globalState, updateGlobalState } = useGlobalState({ counter: 0 })
 
   const { counter } = globalState
   return (
-    <GlobalStateProvider>
+    <div>
       <p>
         counter:
         {counter}
@@ -23,9 +23,15 @@ const App = () => {
       <button type="button" onClick={() => updateGlobalState({ counter: counter + 1 })}>
         Add 1 to Global State counter
       </button>
-    </GlobalStateProvider>
+    </div>
   )
 }
+
+const App = () => (
+  <GlobalStateProvider environment={{ debug: true }}>
+    <MyComponent />
+  </GlobalStateProvider>
+)
 
 export default App
 ```

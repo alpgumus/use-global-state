@@ -1,6 +1,6 @@
 import React, { useContext, createContext, useReducer, useEffect, useRef } from 'react'
 
-const environment = { debug: true }
+const environment = { debug: false }
 const GlobalStateCtx = createContext(null)
 
 const globalStateReducer = (state, action) => {
@@ -22,8 +22,8 @@ const initialGlobalState = {
   environment,
 }
 
-export default ({ children }) => {
-  const [globalState, updateGlobalState] = useReducer(globalStateReducer, initialGlobalState)
+export default ({ children, environment }) => {
+  const [globalState, updateGlobalState] = useReducer(globalStateReducer, { ...initialGlobalState, environment })
   const globalVariables = useRef()
   const updateGlobalVariables = vars => {
     globalVariables.current = { ...globalVariables.current, ...vars }
